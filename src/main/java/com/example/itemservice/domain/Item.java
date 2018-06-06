@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+
 /**
  * Created by nvpivot on 6/6/18.
  */
@@ -33,9 +34,9 @@ public class Item {
     this.name = name;
   }
 
-  public Item(String name, Double price) {
+  public Item(String name, String price) {
     this.id = COUNTER.getAndIncrement();
     this.name = name;
-    this.price = price;
+    this.price = Double.parseDouble(price);
   }
 }

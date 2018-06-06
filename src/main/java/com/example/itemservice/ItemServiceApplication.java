@@ -1,7 +1,7 @@
 package com.example.itemservice;
 
 import com.example.itemservice.domain.Item;
-import com.example.itemervice.repo.ItemRepository;
+import com.example.itemservice.repo.ItemRepository;
 
 import org.apache.geode.cache.client.ClientRegionShortcut;
 import org.springframework.boot.ApplicationRunner;
@@ -23,8 +23,8 @@ public class ItemServiceApplication {
 
 		return args -> {
 
-			itemRepository.save(new Item("foot"));
-			itemRepository.save(new Item("leg"));
+			itemRepository.save(new Item("Book", "123.45"));
+			itemRepository.save(new Item("Ipad", "678.90"));
 
 			System.out.println("Items are: "+itemRepository.findAll());
 		};
